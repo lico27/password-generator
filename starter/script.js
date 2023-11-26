@@ -111,27 +111,33 @@ let numericChoice = confirm("Click OK if you want to include numeric characters"
 let specialChoice = confirm("And lastly, click OK if you want to include special characters")
 
 
-// console.log(lengthChoice);
-// console.log(upperChoice);
-// console.log(lowerChoice);
-// console.log(numericChoice);
-// console.log(specialChoice);
+console.log(lengthChoice);
+console.log(upperChoice);
+console.log(lowerChoice);
+console.log(numericChoice);
+console.log(specialChoice);
 
 
 }
 
-// getPasswordOptions();
+
 
 // // Function for getting a random element from an array
-// function getRandom(arr) {
+function getRandom(arr) {
+  let random = Math.floor(Math.random() * arr.length);
+  return(arr[random]);
+}
 
-// }
+console.log(getRandom(lowerCasedCharacters));
 
-// // Function to generate password with user input
+
+// Function to generate password with user input
 // function generatePassword() {
 //   getPasswordOptions();
 
 // }
+
+// generatePassword();
 
 // // Get references to the #generate element
 // var generateBtn = document.querySelector('#generate');
@@ -144,5 +150,5 @@ let specialChoice = confirm("And lastly, click OK if you want to include special
 //   passwordText.value = password;
 // }
 
-// // Add event listener to generate button
+// Add event listener to generate button
 // generateBtn.addEventListener('click', writePassword);

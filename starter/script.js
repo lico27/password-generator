@@ -91,10 +91,6 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-let passwordChoices = {
-
-}
-
 let lengthChoice = prompt("How long do you want your password to be? (From 8-128 characters)");
 
 if (lengthChoice > 128) {
@@ -111,31 +107,49 @@ let numericChoice = confirm("Click OK if you want to include numeric characters"
 let specialChoice = confirm("And lastly, click OK if you want to include special characters")
 
 
-console.log(lengthChoice);
-console.log(upperChoice);
-console.log(lowerChoice);
-console.log(numericChoice);
-console.log(specialChoice);
+// console.log(lengthChoice);
+// console.log(upperChoice);
+// console.log(lowerChoice);
+// console.log(numericChoice);
+// console.log(specialChoice);
 
+let passwordChoices = {
+  length: lengthChoice,
+  uppercase: upperChoice,
+  lowercase: lowerChoice,
+  numbers: numericChoice,
+  specials: specialChoice,
+}
+
+return(passwordChoices);
+
+console.log(passwordChoices);
 
 }
 
 
 
 // // Function for getting a random element from an array
-function getRandom(arr) {
-  let random = Math.floor(Math.random() * arr.length);
-  return(arr[random]);
-}
+// function getRandom(arr) {
+//   let random = (Math.floor(Math.random() * arr.length) + 1);
+//   return(arr[random]);
+// }
 
-console.log(getRandom(lowerCasedCharacters));
+// console.log(getRandom(lowerCasedCharacters));
 
 
 // Function to generate password with user input
-// function generatePassword() {
-//   getPasswordOptions();
+function generatePassword() {
+  getPasswordOptions();
+  let randomPassword = [];
+  let allCharacters = [];
+  let chosenCharacters =[];
 
-// }
+  if (passwordChoices.uppercase === true) {
+    
+  }
+
+}
 
 // generatePassword();
 

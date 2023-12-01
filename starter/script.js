@@ -91,11 +91,17 @@ var specialCharacters = [
   // Function to prompt user for password options
   function getPasswordOptions() {
 
+    // Get password length and validate
     let lengthChoice = prompt("How long do you want your password to be? (From 8-128 characters)");
-
     while (lengthChoice > 128 || lengthChoice < 8 || isNaN(lengthChoice)) {
       lengthChoice = prompt("Invalid choice. Please choose a number from 8-128 characters");
     }
+
+    // Get character choices
+    let upperChoice = confirm("Click OK if you want to include uppercase characters");
+    let lowerChoice = confirm("Click OK if you want to include lowercase characters");
+    let numericChoice = confirm("Click OK if you want to include numeric characters");
+    let specialChoice = confirm("And lastly, click OK if you want to include special characters")
   }
 
   getPasswordOptions();

@@ -102,10 +102,22 @@ var specialCharacters = [
     let lowerChoice = confirm("Click OK if you want to include lowercase characters");
     let numericChoice = confirm("Click OK if you want to include numeric characters");
     let specialChoice = confirm("And lastly, click OK if you want to include special characters")
+
+    // Store character choices
+    let userChoices = {
+      length: lengthChoice,
+      uppercase: upperChoice,
+      lowercase: lowerChoice,
+      numeric: numericChoice,
+      special: specialChoice,
+    }
+
+    return userChoices;
+  
   }
 
-  getPasswordOptions();
-  
+  let chosenChars = getPasswordOptions();
+
   // Function for getting a random element from an array
   function getRandom(arr) {
   

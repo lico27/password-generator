@@ -1,111 +1,29 @@
-// Array of special characters to be included in password
-var specialCharacters = [
-    '@',
-    '%',
-    '+',
-    '\\',
-    '/',
-    "'",
-    '!',
-    '#',
-    '$',
-    '^',
-    '?',
-    ':',
-    ',',
-    ')',
-    '(',
-    '}',
-    '{',
-    ']',
-    '[',
-    '~',
-    '-',
-    '_',
-    '.'
-  ];
-  // Array of numeric characters to be included in password
-  var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  // Array of lowercase characters to be included in password
-  var lowerCasedCharacters = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z'
-  ];
-  // Array of uppercase characters to be included in password
-  var upperCasedCharacters = [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z'
-  ];
+
   // Function to prompt user for password options
   function getPasswordOptions() {
-  //   Present a series of prompts for password criteria
-  // Length of password
-  // At least 8 characters but no more than 128.
-  // Character types
-  // Lowercase
-  // Uppercase
-  // Numeric
-  // Special characters ($@%&*, etc)
-  // we prompt for each of the criteria asking for user input. (prompt return value they typed)
-  // if they input an invalid number for length, or typeof input is not a number, keep prompting them for the length (can use a while loop)
-  // use confirm to get if they want lowercase, uppercase, special chars (confirms return boolean)
-  // store the value of that input inside an object
-  // add the values of each user response to an object
-  // passwordCriteria = {
-  //   length: 9 // whatever length the user answered for the prompt
-  //   lowercase: true //
-  //   // same properties and values for all the other criteria
-  // }
-    // return object containing the password criteria that the user chose based on the prompts
+    Present a series of prompts for password criteria
+  Length of password
+  At least 8 characters but no more than 128.
+  Character types
+  Lowercase
+  Uppercase
+  Numeric
+  Special characters ($@%&*, etc)
+
+  we prompt for each of the criteria asking for user input. (prompt return value they typed)
+  if they input an invalid number for length, or typeof input is not a number, keep prompting them for the length (can use a while loop)
+  use confirm to get if they want lowercase, uppercase, special chars (confirms return boolean)
+  store the value of that input inside an object
+  add the values of each user response to an object
+  passwordCriteria = {
+    length: 9 // whatever length the user answered for the prompt
+    lowercase: true //
+    // same properties and values for all the other criteria
   }
+    return object containing the password criteria that the user chose based on the prompts
+  }
+
+
   // Function for getting a random element from an array
   function getRandom(arr) {
     // get a random number in the range of the arr length to serve as the index of arr

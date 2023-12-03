@@ -16,7 +16,7 @@ The webpage can be viewed at https://lico27.github.io/password-generator and the
 TBC
 
 ## Credits
-JavaScript coded by Liam Cottrell with guidance from Nirav Venkatesan. HTML and CSS provided by edX Front-End Dev Bootcamp.
+JavaScript coded by Liam Cottrell with guidance from Nirav Venkatesan. HTML and CSS provided by edX Front-End Dev Bootcamp. 
 
 ## License
 Produced under the MIT license.

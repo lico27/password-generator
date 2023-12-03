@@ -92,9 +92,9 @@ var specialCharacters = [
   function getPasswordOptions() {
 
     // Get password length and validate
-    let lengthChoice = prompt("How long do you want your password to be? (From 8-128 characters)");
-    while (lengthChoice > 128 || lengthChoice < 8 || isNaN(lengthChoice)) {
-      lengthChoice = prompt("Invalid choice. Please choose a number from 8-128 characters");
+    let pwLengthChoice = prompt("How long do you want your password to be? (From 8-128 characters)");
+    while (pwLengthChoice > 128 || pwLengthChoice < 8 || isNaN(pwLengthChoice)) {
+      pwLengthChoice = prompt("Invalid choice. Please choose a number from 8-128 characters");
     }
 
     // Get character choices
@@ -104,13 +104,13 @@ var specialCharacters = [
     let specialChoice = confirm("And lastly, click OK if you want to include special characters")
 
     // Store character choices
-    let userChoices = {
-      length: lengthChoice,
-      uppercase: upperChoice,
-      lowercase: lowerChoice,
-      numeric: numericChoice,
-      special: specialChoice,
-    }
+    let userChoices = [
+    parseInt(pwLengthChoice),
+      upperChoice,
+      lowerChoice,
+      numericChoice,
+      specialChoice,
+    ]
 
     return userChoices;
   
@@ -118,8 +118,6 @@ var specialCharacters = [
 
 // let userChoices = getPasswordOptions();
 // console.log(userChoices); 
-
-
 
 
 
@@ -134,10 +132,8 @@ var specialCharacters = [
 let specialIndex = getRandom(specialCharacters);
 console.log(specialIndex);
 
-// for (let i = 0; i < array.length; i++) {
-//   const element = array[i];
-  
-// }
+
+
 
   // Function to generate password with user input
   function generatePassword() {

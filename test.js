@@ -29,6 +29,8 @@
     // get a random number in the range of the arr length to serve as the index of arr
     // return arr[random number] (array at the index of the random number we generated)
   }
+
+  
   // Function to generate password with user input
   function generatePassword() {
   var randomPassword = []

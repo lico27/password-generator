@@ -116,13 +116,29 @@ var specialCharacters = [
   
   }
 
-  let chosenChars = getPasswordOptions();
+// let userChoices = getPasswordOptions();
+// console.log(userChoices); 
+
+
+
+
+
 
   // Function for getting a random element from an array
   function getRandom(arr) {
-  
+    let arrIndex = Math.floor(Math.random() * arr.length);
+    console.log(arrIndex);
+    return arr[arrIndex];
   }
   
+let specialIndex = getRandom(specialCharacters);
+console.log(specialIndex);
+
+// for (let i = 0; i < array.length; i++) {
+//   const element = array[i];
+  
+// }
+
   // Function to generate password with user input
   function generatePassword() {
   

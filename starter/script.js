@@ -129,17 +129,36 @@ var specialCharacters = [
     return arr[arrIndex];
   }
   
-let specialIndex = getRandom(specialCharacters);
-console.log(specialIndex);
+
+
+// let specialIndex = getRandom(specialCharacters);
+// console.log(specialIndex);
 
 
 
 
   // Function to generate password with user input
   function generatePassword() {
-  
+    let characterOptions = [];
+    let requiredCharacters =[];
+     
+    if (userChoices[1] === true) {
+      characterOptions = characterOptions.concat(upperCasedCharacters);
+    }
+    if (userChoices[2] === true) {
+      characterOptions = characterOptions.concat(lowerCasedCharacters);
+    }
+    if (userChoices[3] === true) {
+      characterOptions = characterOptions.concat(numericCharacters);
+    }
+    if (userChoices[4] === true) {
+      characterOptions = characterOptions.concat(specialCharacters); 
+    }
+    console.log(characterOptions);
   }
   
+generatePassword();
+
 //   // Get references to the #generate element
 //   var generateBtn = document.querySelector('#generate');
   

@@ -1,4 +1,4 @@
-# password-generator
+# password-generator v1
 
 ## Description
 An app to generate a random password based on user preferences. **Please note: this app is not yet functional but is a work in progress.**

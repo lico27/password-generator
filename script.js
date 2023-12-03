@@ -144,15 +144,12 @@ var specialCharacters = [
       characterOptions = characterOptions.concat(specialCharacters); 
       requiredCharacters = requiredCharacters.concat(getRandom(specialCharacters));
     }
-    // console.log(characterOptions);
-    console.log(requiredCharacters);
 
     for (let i = 0; i < userChoices[0]; i++) {
       requiredCharacters = requiredCharacters.concat(getRandom(characterOptions));
-      
     }
-
-    console.log(requiredCharacters);
+    
+    return requiredCharacters;
 
   }
 

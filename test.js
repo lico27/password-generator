@@ -30,22 +30,23 @@
     // return arr[random number] (array at the index of the random number we generated)
   }
 
-  
+
   // Function to generate password with user input
   function generatePassword() {
   var randomPassword = []
     // initialize array for storing all potential chars that can be in password
     var potentialChars = []
     var requiredChars = []
-    // get the password criteria that were returned from the getPasswordOptions()
-    // if user chose lowercase, concatenate the lowercase chars array onto potential chars array, pick a random char from the lowercase array and push it to the required characters array
+    get the password criteria that were returned from the getPasswordOptions()
+    if user chose lowercase, concatenate the lowercase chars array onto potential chars array, pick a random char from the lowercase array and push it to the required characters array
     
-    // if user chose uppercase, concatenate the uppercase chars array onto potential chars array, pick a random char from the uppercase array and push it to the required characters array
-    // if user chose numeric, concatenate the numeric chars array onto potential chars array, pick a random char from the numeric array and push it to the required characters array
-    // if user chose special chars, concatenate the special chars array onto potential chars array
-  // at this point, potential chars is a large array of all potential chars that can go into users password
-  // at this point, requiredChars will be an array with one of each character type that the user chose
-  requiredChars = ['c', 'S', 3]
+    if user chose uppercase, concatenate the uppercase chars array onto potential chars array, pick a random char from the uppercase array and push it to the required characters array
+    if user chose numeric, concatenate the numeric chars array onto potential chars array, pick a random char from the numeric array and push it to the required characters array
+    if user chose special chars, concatenate the special chars array onto potential chars array
+  at this point, potential chars is a large array of all potential chars that can go into users password
+  at this point, requiredChars will be an array with one of each character type that the user chose
+
+  
   // for each num in users password length choice
   // for (let i = 0; i < passwordLength; i++){
     // add random chars from potential chars arr onto out random password string

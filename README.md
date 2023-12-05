@@ -1,8 +1,7 @@
 # password-generator v1
 
 ## Description
-An app to generate a random password based on user preferences. **Please note: this app is not yet functional but is a work in progress.**
-
+An app to generate a random password based on user preferences.
 ### Project Deliverables
 TBC
 
@@ -10,7 +9,7 @@ TBC
 TBC
 
 ### Usage
-The webpage can be viewed at https://lico27.github.io/password-generator and the JavaScript can be viewed in the repository, currently at /starter/index.js.
+The webpage can be viewed at https://lico27.github.io/password-generator and the JavaScript can be viewed in the repository at script.js.
 
 ### Screenshot
 TBC

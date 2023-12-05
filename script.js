@@ -97,15 +97,22 @@ var specialCharacters = [
       pwLengthChoice = prompt("Invalid choice. Please choose a number from 8-128 characters");
     }
 
-    // Get character choices
+    // Get character choices and validate
     let upperChoice = confirm("Click OK if you want to include uppercase characters");
     let lowerChoice = confirm("Click OK if you want to include lowercase characters");
     let numericChoice = confirm("Click OK if you want to include numeric characters");
-    let specialChoice = confirm("And lastly, click OK if you want to include special characters")
+    let specialChoice = confirm("And lastly, click OK if you want to include special characters");
+
+    while (upperChoice === false && lowerChoice === false && numericChoice === false && specialChoice === false) {
+      upperChoice = confirm("You must chose at least one type of character. Click OK if you want to include uppercase characters");
+      lowerChoice = confirm("Click OK if you want to include lowercase characters");
+      numericChoice = confirm("Click OK if you want to include numeric characters");
+      specialChoice = confirm("And lastly, click OK if you want to include special characters");
+    }
 
     // Store character choices
     let userChoices = [
-    parseInt(pwLengthChoice),
+      parseInt(pwLengthChoice),
       upperChoice,
       lowerChoice,
       numericChoice,
@@ -127,29 +134,39 @@ var specialCharacters = [
     let userChoices = getPasswordOptions();
     let characterOptions = [];
     let requiredCharacters =[];
-     
+    let requiredLength = 0;
+  
+  // Add one character per required character type 
     if (userChoices[1] === true) {
       characterOptions = characterOptions.concat(upperCasedCharacters);
       requiredCharacters = requiredCharacters.concat(getRandom(upperCasedCharacters));
+      requiredLength++;
     }
     if (userChoices[2] === true) {
       characterOptions = characterOptions.concat(lowerCasedCharacters);
       requiredCharacters = requiredCharacters.concat(getRandom(lowerCasedCharacters));
+      requiredLength++;
     }
     if (userChoices[3] === true) {
       characterOptions = characterOptions.concat(numericCharacters);
       requiredCharacters = requiredCharacters.concat(getRandom(numericCharacters));
+      requiredLength++;
     }
     if (userChoices[4] === true) {
       characterOptions = characterOptions.concat(specialCharacters); 
       requiredCharacters = requiredCharacters.concat(getRandom(specialCharacters));
+      requiredLength++;
     }
 
-    for (let i = 0; i < userChoices[0]; i++) {
+// Add random characters to password (length determined by user)
+    for (let i = 0; i < (userChoices[0] - requiredLength); i++) {
       requiredCharacters = requiredCharacters.concat(getRandom(characterOptions));
     }
     
-    return requiredCharacters;
+// Join password array into string
+    let passwordFinal = requiredCharacters.join("");
+    
+    return passwordFinal
 
   }
 
@@ -162,6 +179,7 @@ var specialCharacters = [
     var passwordText = document.querySelector('#password');
   
     passwordText.value = password;
+  
   }
   
   // Add event listener to generate button

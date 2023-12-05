@@ -32,6 +32,6 @@ JavaScript coded by Liam Cottrell with guidance from Nirav Venkatesan. HTML and 
 Produced under the MIT license.
 
 ## Badges
-![Static Badge](https://img.shields.io/badge/project-in_progress-blue)
+![Static Badge](https://img.shields.io/badge/project-complete-brightgreen)
 
 
